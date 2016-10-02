@@ -43,6 +43,11 @@ add ( dx, dy ) ps =
     List.map (\( x, y ) -> ( x + dx, y + dy )) ps
 
 
+flip : List Point -> List Point
+flip ps =
+    List.map (\( x, y ) -> ( -x, y )) ps
+
+
 rotate : Float -> List Point -> List Point
 rotate angle ps =
     let
