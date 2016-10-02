@@ -38,11 +38,7 @@ main =
                 |> snap 3 (to med 1)
     in
         svg [ viewBox "-4 -5 10 10" ]
-            [ big1
-                |> draw colors.gray
-            , big2
-                |> draw colors.blue
-            , triangle 1
+            [ triangle 1
                 |> rotate 180
                 |> snap 2 (to big1 2)
                 |> draw colors.orange
@@ -57,4 +53,8 @@ main =
                 |> draw colors.blue
             , par
                 |> draw colors.green
+            , big1
+                |> draw colors.gray
+            , big2
+                |> draw colors.blue
             ]
