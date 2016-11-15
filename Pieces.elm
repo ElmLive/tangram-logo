@@ -54,12 +54,12 @@ rotate angle ps =
         rad =
             degrees angle
 
-        rotate' ( x, y ) =
+        rotate_ ( x, y ) =
             ( cos rad * x + sin rad * y
             , sin rad * -x + cos rad * y
             )
     in
-        List.map rotate' ps
+        List.map rotate_ ps
 
 
 triangle : Float -> List Point
